@@ -1,15 +1,42 @@
-//
-//  main.cpp
-//  MohammadFawazSiddiqi_5465163_CSCI251Ass3
-//
-//  Created by Fawaz Siddiqi on 12/3/18.
-//  Copyright © 2018 Fawaz Siddiqi. All rights reserved.
-//
-
+/***************************************************************************
+ * main.cpp - CSCI251/851 - Ass3 - main() driver for testing WordStats class
+ * Mohammad Fawaz Siddiqi 5465163 mfs995 3/12/18
+ ***************************************************************************/
+ 
 #include <iostream>
+#include "wordstats.h"
+using namespace std;
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    return 0;
+
+int main(){
+	
+   WordStats ws;
+   cout << "Begin Text File Analyser Tests\n\n";
+
+   cout << "Step-1 Reading and displaying dictionary\n";
+   ws.ReadDictionary();
+   ws.DisplayDictionary();
+
+   cout << "Step-2 Reading words from text file\n";
+   ws.ReadTxtFile();
+
+   cout << "Step-3 Displaying known words:\n";
+   ws.DisplayKnownWordStats();
+
+   cout << "Step-4 Displaying unknown words:\n";
+   ws.DisplayUnknownWordStats();
+
+   cout << "Step-5 Displaying most frequent known words\n";
+   ws.DisplayMostFreqKnownWords();
+
+   cout << "Step-6 Displaying most frequent unknown words\n";
+   ws.DisplayMostFreqUnknownWords();
+
+   cout << "Step-7 Displaying original text\n";
+   ws.DisplayOriginalText();
+
+   cout << "\nEnd Text File Analyser Tests\n\n";
+
+   return 0;
 }
+
